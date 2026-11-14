@@ -12,6 +12,8 @@ export interface TrendResult {
   indicator: string;
   unit: string;
   observations: number;
+  mann_kendall_s: number;
+  mann_kendall_z: number;
   p_value: number;
   sens_slope_per_year: number;
   trend_direction: "increasing" | "decreasing" | "no trend";
@@ -39,6 +41,9 @@ export interface TrendSummary {
     temperature_sen_slope_difference_riyadh_minus_jazan: number;
     precipitation_sen_slope_difference_riyadh_minus_jazan: number;
     interpretation: string;
+  };
+  methodology: {
+    significance: string;
   };
   validation: {
     annual_observations_per_region: Record<Region, number>;

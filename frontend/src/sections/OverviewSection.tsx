@@ -6,7 +6,7 @@ export function OverviewSection({ summary }: { summary: TrendSummary }) {
       <div className="section-heading">
         <div>
           <p className="eyebrow">01 / The study</p>
-          <h2>One region. Two perspectives.</h2>
+          <h2>Two regions. One shared record.</h2>
         </div>
         <p className="section-note">A consistent NASA POWER record, shaped into an honest starting point for exploration.</p>
       </div>

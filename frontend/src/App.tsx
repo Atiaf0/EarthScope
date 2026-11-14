@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Navigation } from "./components/Navigation";
 import { loadAnalysisData } from "./data/loadAnalysisData";
 import { ExploreSection } from "./sections/ExploreSection";
+import { DetectSection } from "./sections/DetectSection";
+import { CompareSection } from "./sections/CompareSection";
 import { HeroSection } from "./sections/HeroSection";
 import { MethodologySection } from "./sections/MethodologySection";
 import { OverviewSection } from "./sections/OverviewSection";
@@ -17,7 +19,7 @@ export default function App() {
   return (
     <>
       <Navigation />
-      {error ? <main className="state-message"><p className="eyebrow">Data unavailable</p><h1>EarthScope could not load its processed record.</h1><p>{error}</p></main> : !data ? <main className="state-message"><span className="loader" /><p>Loading the EarthScope record…</p></main> : <main><HeroSection /><OverviewSection summary={data.summary} /><ExploreSection records={data.annualRecords} summary={data.summary} /><MethodologySection summary={data.summary} /></main>}
+      {error ? <main className="state-message"><p className="eyebrow">Data unavailable</p><h1>EarthScope could not load its processed record.</h1><p>{error}</p></main> : !data ? <main className="state-message"><span className="loader" /><p>Loading the EarthScope record…</p></main> : <main><HeroSection /><OverviewSection summary={data.summary} /><ExploreSection records={data.annualRecords} summary={data.summary} /><DetectSection summary={data.summary} /><CompareSection summary={data.summary} /><MethodologySection summary={data.summary} /></main>}
       <footer><span>EarthScope / INSIGHT · Team 19</span><span>NASA Space Apps Challenge 2026</span></footer>
     </>
   );

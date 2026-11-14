@@ -19,10 +19,16 @@ export function ExploreSection({ records, summary }: { records: AnnualRecord[]; 
         <div className="chart-heading"><div><span className="chart-kicker">{label}</span><strong>{unit}</strong></div><span className="chart-source">Annual processed indicators · 26 observations</span></div>
         <TrendChart records={records} metric={metric} />
       </div>
-      <div className="trend-cards" id="compare">
+      <div className="trend-cards">
         {(["Jazan", "Riyadh"] as const).map((region) => {
           const result = summary.trends[`${region.toLowerCase()}_${metric}`];
-          return <article className="trend-card" key={region}><span>{region}</span><strong>{result.sens_slope_per_year > 0 ? "+" : ""}{result.sens_slope_per_year.toFixed(3)} <small>{unit}/yr</small></strong><p><i className={result.statistically_significant ? "significant" : ""} /> {result.statistically_significant ? "Significant trend" : "Not significant at α = 0.05"}</p></article>;
+          const adjusted = summary.adjusted_trends[`${region.toLowerCase()}_${metric}`];
+          return <article className="trend-card" key={region}>
+            <div className="trend-card-label"><span>{region}</span><small>Original test</small></div>
+            <strong>{result.sens_slope_per_year > 0 ? "+" : ""}{result.sens_slope_per_year.toFixed(3)} <small>{unit}/yr</small></strong>
+            <p><i className={result.statistically_significant ? "significant" : ""} /> {result.statistically_significant ? "Significant" : "Not significant"} · p = {result.p_value.toFixed(4)}</p>
+            <p className="sensitivity-note"><i className={adjusted.statistically_significant ? "significant" : ""} /> Sensitivity: {adjusted.statistically_significant ? "remains significant" : "not significant"} · p = {adjusted.p_value.toFixed(4)}</p>
+          </article>;
         })}
       </div>
     </section>

@@ -1,15 +1,21 @@
 import { BrandMark } from "./BrandMark";
 
-const links = ["Overview", "Explore", "Compare", "Discover", "Methodology"];
+const links = [
+  ["Overview", "overview"],
+  ["Explore", "explore"],
+  ["Detect", "detect"],
+  ["Compare", "compare-insights"],
+  ["Understand", "methodology"],
+];
 
 export function Navigation() {
   return (
     <header className="site-header">
       <BrandMark />
       <nav aria-label="Primary navigation">
-        {links.map((link) => (
-          <a key={link} href={`#${link.toLowerCase()}`}>
-            {link}
+        {links.map(([label, target]) => (
+          <a key={target} href={`#${target}`}>
+            {label}
           </a>
         ))}
       </nav>

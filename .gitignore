@@ -1,0 +1,27 @@
+# Python environments and generated cache files
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Local environment files (keep the shareable template)
+.env
+.env.*
+!.env.example
+
+# Node dependencies and frontend build output
+node_modules/
+dist/
+
+# Operating-system temporary files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor temporary files and local project metadata
+*.swp
+*.swo
+*.tmp
+.idea/
+.vscode/*
+!.vscode/extensions.json

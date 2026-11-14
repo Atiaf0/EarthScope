@@ -1,0 +1,199 @@
+{
+  "generated_at_utc": "2026-11-14T17:06:28.008940+00:00",
+  "period": {
+    "start_year": 2000,
+    "end_year": 2025
+  },
+  "methodology": {
+    "temperature": "Calendar-day-weighted mean of monthly T2M values.",
+    "precipitation": "Monthly PRECTOTCORR mm/day multiplied by actual calendar days, then summed.",
+    "mann_kendall": "Two-sided normal-approximation Mann-Kendall test with tie correction and continuity correction.",
+    "sen_slope": "Median of all pairwise annual slopes.",
+    "significance": "alpha = 0.05; p-value below alpha is statistically significant."
+  },
+  "metadata": {
+    "Jazan": {
+      "source": [
+        "MERRA2"
+      ],
+      "coordinates": [
+        42.55,
+        16.883,
+        31.32
+      ],
+      "units": {
+        "T2M": "C",
+        "PRECTOTCORR": "mm/day"
+      },
+      "monthly_records": 312,
+      "annual_summary_keys_excluded": 26
+    },
+    "Riyadh": {
+      "source": [
+        "MERRA2"
+      ],
+      "coordinates": [
+        46.675,
+        24.714,
+        614.49
+      ],
+      "units": {
+        "T2M": "C",
+        "PRECTOTCORR": "mm/day"
+      },
+      "monthly_records": 312,
+      "annual_summary_keys_excluded": 26
+    }
+  },
+  "trends": {
+    "jazan_temperature": {
+      "indicator": "annual_mean_temperature",
+      "unit": "degC",
+      "observations": 26,
+      "mann_kendall_s": 77,
+      "mann_kendall_variance": 2058.3333333333335,
+      "mann_kendall_z": 1.6751578570850707,
+      "p_value": 0.09390326367306254,
+      "sens_slope_per_year": 0.008054080510402283,
+      "trend_direction": "increasing",
+      "alpha": 0.05,
+      "statistically_significant": false
+    },
+    "jazan_precipitation": {
+      "indicator": "annual_total_precipitation",
+      "unit": "mm",
+      "observations": 26,
+      "mann_kendall_s": 107,
+      "mann_kendall_variance": 2058.3333333333335,
+      "mann_kendall_z": 2.336404379618651,
+      "p_value": 0.019470175913089086,
+      "sens_slope_per_year": 7.275714285714282,
+      "trend_direction": "increasing",
+      "alpha": 0.05,
+      "statistically_significant": true
+    },
+    "riyadh_temperature": {
+      "indicator": "annual_mean_temperature",
+      "unit": "degC",
+      "observations": 26,
+      "mann_kendall_s": 119,
+      "mann_kendall_variance": 2058.3333333333335,
+      "mann_kendall_z": 2.6009029886320834,
+      "p_value": 0.009297874290658004,
+      "sens_slope_per_year": 0.02655479452054843,
+      "trend_direction": "increasing",
+      "alpha": 0.05,
+      "statistically_significant": true
+    },
+    "riyadh_precipitation": {
+      "indicator": "annual_total_precipitation",
+      "unit": "mm",
+      "observations": 26,
+      "mann_kendall_s": 101,
+      "mann_kendall_variance": 2058.3333333333335,
+      "mann_kendall_z": 2.204155075111935,
+      "p_value": 0.02751343998161734,
+      "sens_slope_per_year": 1.515999999999999,
+      "trend_direction": "increasing",
+      "alpha": 0.05,
+      "statistically_significant": true
+    }
+  },
+  "autocorrelation": {
+    "jazan_temperature": {
+      "lag_1": 0.3704258947184598,
+      "detrended_lag_1_used_for_tfpw": 0.24738887394295916,
+      "adjustment": "Yue-Pilon trend-free pre-whitening"
+    },
+    "jazan_precipitation": {
+      "lag_1": 0.6835171412120998,
+      "detrended_lag_1_used_for_tfpw": 0.5438081898155789,
+      "adjustment": "Yue-Pilon trend-free pre-whitening"
+    },
+    "riyadh_temperature": {
+      "lag_1": 0.25501019871538194,
+      "detrended_lag_1_used_for_tfpw": -0.08015029161174667,
+      "adjustment": "Yue-Pilon trend-free pre-whitening"
+    },
+    "riyadh_precipitation": {
+      "lag_1": 0.4879162870696138,
+      "detrended_lag_1_used_for_tfpw": 0.34615644316882455,
+      "adjustment": "Yue-Pilon trend-free pre-whitening"
+    }
+  },
+  "adjusted_trends": {
+    "jazan_temperature": {
+      "indicator": "annual_mean_temperature",
+      "unit": "degC",
+      "observations": 26,
+      "mann_kendall_s": 33,
+      "mann_kendall_variance": 2058.3333333333335,
+      "mann_kendall_z": 0.7053296240358192,
+      "p_value": 0.4806051289858302,
+      "sens_slope_per_year": 0.003906829560549596,
+      "trend_direction": "increasing",
+      "alpha": 0.05,
+      "statistically_significant": false
+    },
+    "jazan_precipitation": {
+      "indicator": "annual_total_precipitation",
+      "unit": "mm",
+      "observations": 26,
+      "mann_kendall_s": 149,
+      "mann_kendall_variance": 2058.3333333333335,
+      "mann_kendall_z": 3.262149511165664,
+      "p_value": 0.001105708096259149,
+      "sens_slope_per_year": 7.248890547383997,
+      "trend_direction": "increasing",
+      "alpha": 0.05,
+      "statistically_significant": true
+    },
+    "riyadh_temperature": {
+      "indicator": "annual_mean_temperature",
+      "unit": "degC",
+      "observations": 26,
+      "mann_kendall_s": 77,
+      "mann_kendall_variance": 2058.3333333333335,
+      "mann_kendall_z": 1.6751578570850707,
+      "p_value": 0.09390326367306254,
+      "sens_slope_per_year": 0.022762653901718215,
+      "trend_direction": "increasing",
+      "alpha": 0.05,
+      "statistically_significant": false
+    },
+    "riyadh_precipitation": {
+      "indicator": "annual_total_precipitation",
+      "unit": "mm",
+      "observations": 26,
+      "mann_kendall_s": 129,
+      "mann_kendall_variance": 2058.3333333333335,
+      "mann_kendall_z": 2.821318496143277,
+      "p_value": 0.0047826693153979055,
+      "sens_slope_per_year": 2.0419121282879833,
+      "trend_direction": "increasing",
+      "alpha": 0.05,
+      "statistically_significant": true
+    }
+  },
+  "regional_comparison": {
+    "temperature_sen_slope_difference_riyadh_minus_jazan": 0.01850071401014615,
+    "precipitation_sen_slope_difference_riyadh_minus_jazan": -5.759714285714283,
+    "interpretation": "Slope differences are descriptive comparisons. Separate Mann-Kendall p-values do not test whether regional slopes differ significantly; no between-region significance test is claimed here."
+  },
+  "validation": {
+    "annual_observations_per_region": {
+      "Jazan": 26,
+      "Riyadh": 26
+    },
+    "all_annual_values_present": true,
+    "temperature_unit": "degC",
+    "precipitation_unit": "mm",
+    "raw_files_unchanged": true,
+    "csv_exact_year_sequence": true
+  },
+  "limitations": [
+    "Trend-free pre-whitening is reported as a sensitivity adjustment; no formal autocorrelation hypothesis test is claimed.",
+    "Regional slope differences are not assigned a significance test in this first version.",
+    "The analysis describes trends and does not establish causation."
+  ]
+}
